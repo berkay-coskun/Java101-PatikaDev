@@ -1,17 +1,31 @@
 import java.util.Scanner;
 public class Main {
+
     public static void main(String[] args) {
-	// Değikenler belirlenir
-     double boy, indeks;
-     int kilo;
-     Scanner inp = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
+        System.out.print(" N sayısını giriniz : ");
+        int n = input.nextInt();
 
-        System.out.print("Lütfen Boyunuzu(metre(m) cinsinden) Giriniz :");
-        boy =inp.nextDouble();
-        System.out.print("Lütfen kilonuzu(kilogram(kg) cinsinden) Giriniz :");
-        kilo=inp.nextInt();
+        for (int i = 1; i <= n; i++) {     // kaç satır gezeceğimizi belirler. //
 
-        indeks = kilo/(boy*boy);
-        System.out.println("Vücut Kitle İndeksi :" +indeks);
+            for (int j = 1; j <= (n - i); j++) {     // satır başından ne kadar boşluk bırakılması gerektiğini belirler. //
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i) - 1; k++) {     // her satırda kaç adet yıldız olması gerektiğini belirler. //
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+       for (int i =(n-1);i >= 1; i--){               // kaç satır gezeceğimizi belirler. //
+
+           for (int j = 1;j <= (n-i); j++){           // satır başından ne kadar boşluk bırakılması gerektiğini belirler. //
+               System.out.print(" ");
+           }
+           for (int k = 1;k <= (2 * i) - 1; k++){       // her satırda kaç adet yıldız olması gerektiğini belirler. //
+               System.out.print("*");
+           }
+           System.out.println();
+       }
     }
 }
+
